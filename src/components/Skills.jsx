@@ -54,7 +54,10 @@ const Skills = () => {
   return (
     <div className="min-h-screen p-8">
       {/* Section Heading */}
-      <h2 className="text-4xl font-bold text-center mb-10 text-white">
+      <h2
+        className="text-4xl font-bold text-center mb-10 text-white"
+        id="skills"
+      >
         My Skills
       </h2>
 
