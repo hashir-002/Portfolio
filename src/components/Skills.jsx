@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // Skill data
 const skills = [
@@ -64,9 +65,12 @@ const Skills = () => {
       {/* Skills Container */}
       <div className="flex flex-wrap justify-center gap-8">
         {skills.map((skill, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-xl shadow-cyan-700 hover:shadow-2xl transition-transform transform hover:scale-110 flex flex-col items-center w-40 h-40"
+            className="bg-white p-6 rounded-lg shadow-xl shadow-cyan-700 hover:shadow-2xl flex flex-col items-center w-40 h-40"
+            whileHover={{ scale: 1.2 }}
+            onHoverStart={e => {}}
+            onHoverEnd={e => {}}
           >
             {/* Skill Image */}
             <img
@@ -79,7 +83,7 @@ const Skills = () => {
             <p className="text-lg font-semibold text-center text-gray-700">
               {skill.name}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

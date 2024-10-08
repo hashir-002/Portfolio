@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const variants = {
+    hidden: { x: "-100vw", opacity: 0 }, // Start position (off the screen to the left)
+    visible: { x: 0, opacity: 1 }, };
 
   return (
     <nav className="bg-sky-950 p-4 shadow-xl zind">
@@ -43,16 +48,23 @@ function Navbar() {
           } md:block`}
         >
           {/* Mobile Menu */}
-          <div
+          <motion.div
             className={`zind md:hidden absolute top-16 left-0 w-full bg-blue-950 transition-transform transform ${
               isOpen ? "translate-y-0" : "-translate-y-full"
             } duration-300 ease-in-out`}
+            initial="hidden"    // Initial state before animation starts
+          animate="visible"    // Animate to the visible state
+          exit="hidden"        // Optional: animate back to hidden when removed
+          variants={variants}  // Define the slide-in animation behavior
+          transition={{ duration: 0.5 }} 
           >
-            <ul className="flex flex-col space-y-4 p-4 zind">
+            <motion.ul className="flex flex-col space-y-4 p-4 zind" >
               <li>
-                <a href="/" className="text-white hover:font-bold">
+                <motion.a href="/" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+  onHoverStart={e => {}}
+  onHoverEnd={e => {}}>
                   Home
-                </a>
+                </motion.a>
               </li>
               <li>
                 <a href="#about" className="text-white hover:font-bold">
@@ -74,25 +86,35 @@ function Navbar() {
                   Contact
                 </a>
               </li>
-            </ul>
-          </div>
+            </motion.ul>
+          </motion.div>
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a href="/" className="text-white hover:font-bold">
+            <motion.a href="/" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+  onHoverStart={e => {}}
+  onHoverEnd={e => {}}>
               Home
-            </a>
-            <a href="#about" className="text-white hover:font-bold">
+            </motion.a>
+            <motion.a href="#about" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+  onHoverStart={e => {}}
+  onHoverEnd={e => {}}>
               About
-            </a>
-            <a href="#projects" className="text-white hover:font-bold">
+            </motion.a>
+            <motion.a href="#projects" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+  onHoverStart={e => {}}
+  onHoverEnd={e => {}}>
               Projects
-            </a>
-            <a href="#skills" className="text-white hover:font-bold">
+            </motion.a>
+            <motion.a href="#skills" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+  onHoverStart={e => {}}
+  onHoverEnd={e => {}}>
               Skills
-            </a>
-            <a href="#contact" className="text-white hover:font-bold">
+            </motion.a>
+            <motion.a href="#contact" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+  onHoverStart={e => {}}
+  onHoverEnd={e => {}}>
               Contact
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
