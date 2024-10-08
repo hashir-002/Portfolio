@@ -9,7 +9,7 @@ function Navbar() {
     visible: { x: 0, opacity: 1 }, };
 
   return (
-    <nav className="bg-sky-950 p-4 shadow-xl zind">
+    <nav className="bg-violet-950 p-4 zind">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-2xl font-bold">
           {" "}
