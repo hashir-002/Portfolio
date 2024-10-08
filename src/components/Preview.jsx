@@ -81,7 +81,9 @@ const Preview = () => {
           />
         ))}
       </div>
+      <p className="text-center items-center mt-10 text-white">tap the slide to see more</p>
     </div>
+    
   );
 };
 

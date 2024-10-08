@@ -13,7 +13,7 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <>
-      <div className="bg-gradient-to-b from-sky-950 via-indigo-950 to-violet-950 min-h-screen mx-0 overflow-hidden">
+      <div className="bg-gradient-to-b from-violet-950 via-cyan-900 to-indigo-950 min-h-screen mx-0 overflow-hidden">
         <Navbar />
         <Preview />
         <Hero />
