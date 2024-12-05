@@ -59,39 +59,39 @@ function Navbar() {
             transition={{ duration: 0.5 }}
           >
             <motion.ul className="flex flex-col space-y-4 p-4 zind" >
-              <li>
-                <motion.a href="/" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+              <li className="w-full">
+                <motion.a href="/" className="text-white hover:font-bold " whileHover={{ scale: 1.2 }}
                   onHoverStart={e => { }}
                   onHoverEnd={e => { }}>
                   Home
                 </motion.a>
               </li>
-              <li>
-                <a href="#about" className="text-white hover:font-bold">
-                  About
+              
+                <a href="#about" className="text-white hover:font-bold ">
+                  <li className="w-full">About</li>
                 </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-white hover:font-bold">
-                  Projects
+             
+              
+                <a href="#projects" className="text-white hover:font-bold ">
+                  <li className="w-full">Projects</li>
                 </a>
-              </li>
-              <li>
+              
+              
                 <a href="#skills" className="text-white hover:font-bold">
-                  Skills
+                  <li className="w-full">Skills</li>
                 </a>
                 
-              </li>
-              <li>
-                  <Link to="/blogs" className="text-white hover:font-bold">
-                    Blogs
+             
+              
+                  <Link to="/blogs" className="text-white hover:font-bold w-full">
+                    <li>Blogs</li>
                   </Link>
-                </li>
-              <li>
-                <a href="#contact" className="text-white hover:font-bold">
-                  Contact
+                
+              
+                <a href="#contact" className="text-white hover:font-bold w-full">
+                  <li className="w-full">Contact</li>
                 </a>
-              </li>
+              
             </motion.ul>
           </motion.div>
           {/* Desktop Menu */}
