@@ -80,10 +80,13 @@ function Navbar() {
                 <a href="#skills" className="text-white hover:font-bold">
                   Skills
                 </a>
-                <Link to="/blogs" className="text-white hover:font-bold">
-                  Blogs
-                </Link>
+                
               </li>
+              <li>
+                  <Link to="/blogs" className="text-white hover:font-bold">
+                    Blogs
+                  </Link>
+                </li>
               <li>
                 <a href="#contact" className="text-white hover:font-bold">
                   Contact
