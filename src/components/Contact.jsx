@@ -1,11 +1,12 @@
 import React from "react";
 import { CgMail } from "react-icons/cg";
 import { FaInstagram } from "react-icons/fa";
+import Form from "./Form";
 
 const Contact = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-28 bg-gray-100 p-8 bg-slate-900 border-t-2 border-white"
+      className="flex flex-col items-center justify-center min-h-28 p-8 bg-slate-900 border-t-2 border-white"
       id="contact"
     >
       {/* Heading */}
@@ -14,7 +15,9 @@ const Contact = () => {
       </h2>
 
       {/* Icon */}
-      <div className="justify-center">
+      <div className="justify-center w-full flex flex-col items-center">
+
+        <Form/>
         <a
           className="flex mx-2"
           href="https://www.instagram.com/beingraqueeb?igsh=MWd0NWs4cjUxNmlvcA=="
@@ -30,9 +33,7 @@ const Contact = () => {
 
         {/* Button */}
       </div>
-      <button className="bg-green-400 text-white font-semibold py-3 px-6 rounded-full hover:bg-green-100 transition duration-300 ease-in-out mt-3">
-        <a href="https://wa.me/6281311129">Hire Me</a>
-      </button>
+     
     </div>
   );
 };

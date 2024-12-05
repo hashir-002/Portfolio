@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import {Link} from 'react-router-dom'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const variants = {
     hidden: { x: "-100vw", opacity: 0 }, // Start position (off the screen to the left)
-    visible: { x: 0, opacity: 1 }, };
+    visible: { x: 0, opacity: 1 },
+  };
 
   return (
-    <nav className="bg-violet-950 p-4 zind">
+    <nav className="bg-violet-950 p-4 zind justify-around items-center">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-2xl font-bold">
           {" "}
@@ -43,26 +45,24 @@ function Navbar() {
         </div>
         {/* Navigation Links */}
         <div
-          className={`md:flex items-center space-x-6 ${
-            isOpen ? "block" : "hidden"
-          } md:block`}
+          className={`md:flex items-center space-x-6 ${isOpen ? "block" : "hidden"
+            } md:block`}
         >
           {/* Mobile Menu */}
           <motion.div
-            className={`zind md:hidden absolute top-16 left-0 w-full bg-blue-950 transition-transform transform ${
-              isOpen ? "translate-y-0" : "-translate-y-full"
-            } duration-300 ease-in-out`}
+            className={`zind md:hidden absolute top-16 left-0 w-full bg-blue-950 transition-transform transform ${isOpen ? "translate-y-0" : "-translate-y-full"
+              } duration-300 ease-in-out`}
             initial="hidden"    // Initial state before animation starts
-          animate="visible"    // Animate to the visible state
-          exit="hidden"        // Optional: animate back to hidden when removed
-          variants={variants}  // Define the slide-in animation behavior
-          transition={{ duration: 0.5 }} 
+            animate="visible"    // Animate to the visible state
+            exit="hidden"        // Optional: animate back to hidden when removed
+            variants={variants}  // Define the slide-in animation behavior
+            transition={{ duration: 0.5 }}
           >
             <motion.ul className="flex flex-col space-y-4 p-4 zind" >
               <li>
                 <motion.a href="/" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
-  onHoverStart={e => {}}
-  onHoverEnd={e => {}}>
+                  onHoverStart={e => { }}
+                  onHoverEnd={e => { }}>
                   Home
                 </motion.a>
               </li>
@@ -91,30 +91,39 @@ function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <motion.a href="/" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
-  onHoverStart={e => {}}
-  onHoverEnd={e => {}}>
+              onHoverStart={e => { }}
+              onHoverEnd={e => { }}>
               Home
             </motion.a>
             <motion.a href="#about" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
-  onHoverStart={e => {}}
-  onHoverEnd={e => {}}>
+              onHoverStart={e => { }}
+              onHoverEnd={e => { }}>
               About
             </motion.a>
             <motion.a href="#projects" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
-  onHoverStart={e => {}}
-  onHoverEnd={e => {}}>
+              onHoverStart={e => { }}
+              onHoverEnd={e => { }}>
               Projects
             </motion.a>
             <motion.a href="#skills" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
-  onHoverStart={e => {}}
-  onHoverEnd={e => {}}>
+              onHoverStart={e => { }}
+              onHoverEnd={e => { }}>
               Skills
             </motion.a>
+            <Link to="/blogs" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
+              onHoverStart={e => { }}
+              onHoverEnd={e => { }}>
+              Blogs
+            </Link>
             <motion.a href="#contact" className="text-white hover:font-bold" whileHover={{ scale: 1.2 }}
-  onHoverStart={e => {}}
-  onHoverEnd={e => {}}>
+              onHoverStart={e => { }}
+              onHoverEnd={e => { }}>
               Contact
             </motion.a>
+
+            <button className="bg-green-500 text-white font-semibold hidden lg:block py-2 px-6 rounded-full hover:bg-green-100 transition duration-300 ease-in-out">
+              <a href="https://wa.me/6281311129">Hire Me</a>
+            </button>
           </div>
         </div>
       </div>
