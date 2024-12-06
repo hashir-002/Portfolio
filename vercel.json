@@ -1,0 +1,16 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/blogs",
+            "dest": "/blogs"
+        },
+        {
+            "src": "/blog/:slug",
+            "dest": "/blog/:slug"
+        }
+    ]
+}
