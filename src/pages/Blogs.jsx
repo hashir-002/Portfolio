@@ -45,11 +45,11 @@ const Blogs = ({ direction = 'grid' }) => {
               <h3 className="text-xl font-semibold mb-2">{item.fields.title}</h3>
               <p className="text-gray-500 mb-4">{item.fields.date}</p>
               <p className="text-gray-600 mb-4">{item.fields.excerpt}</p>
-              <Link to={`/blog/${item.fields.slug}`}>
+              <a href={`/blog/${item.fields.slug}`}>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
                   Read
                 </button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         );
