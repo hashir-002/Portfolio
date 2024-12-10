@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Allow: /projects/
+Sitemap: https://theraqueeb2208.in/sitemap.xml
