@@ -50,7 +50,7 @@ const slugify = (str) =>
          
         </div>
 
-        <Link to="/contact/">
+        <Link to="/contact/" className='hidden lg:block'>
             <button className="bg-purple-700 text-white px-4 py-2 md:text-xs md:text-center md:px-6 md:py-2 rounded-full text-sm font-medium hover:bg-white hover:border-black hover:border-2 hover:text-violet-950">
               Hire me
             </button>
@@ -91,7 +91,7 @@ const slugify = (str) =>
 
       {/* Mobile Menu */}
       
-        <div className={`${isOpen ? "top-4" : "-top-[800%]"
+        <div className={`${isOpen ? "top-4" : "-top-[1000%]"
         } fixed bottom-0 top-0 z-[999] flex h-[400px] mt-12 w-full flex-col justify-between bg-slate-50 dark:bg-gray-900  px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden shadow-md`}>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
             <a href="/" className="block py-1">Home</a>
