@@ -91,8 +91,8 @@ const slugify = (str) =>
 
       {/* Mobile Menu */}
       
-        <div className={`${isOpen ? "top-4" : "-top-[1000%]"
-        } fixed bottom-0 top-0 z-[999] flex h-[400px] mt-12 w-full flex-col justify-between bg-slate-50 dark:bg-gray-900  px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden shadow-md`}>
+        <div className={`${isOpen ? "left-0" : "-left-[1000%]"
+        } fixed bottom-0 top-0 z-[999] flex h-screen mt-12 w-full flex-col justify-between bg-slate-50 dark:bg-gray-900  px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden shadow-md`}>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
             <a href="/" className="block py-1">Home</a>
           </button>
