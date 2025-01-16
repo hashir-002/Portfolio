@@ -94,22 +94,22 @@ const slugify = (str) =>
         <div className={`${isOpen ? "left-0" : "-left-[1000%]"
         } fixed bottom-0 top-0 z-[999] flex h-screen mt-12 w-full flex-col justify-between bg-slate-50 dark:bg-gray-900  px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden shadow-md`}>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
-            <a href="/" className="block py-1">Home</a>
+            <a href="/" className="block">Home</a>
           </button>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
-            <a href="#about" className="block py-1">About</a>
+            <a href="#about" className="block">About</a>
           </button>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
-            <a href="#skills" className="block py-1">Skills</a>
+            <a href="#skills" className="block">Skills</a>
           </button>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
-            <a href="#projects" className="block py-1">Projects</a>
+            <a href="#projects" className="block">Projects</a>
           </button>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
-            <Link to="/blogs" className="block py-1">Blogs</Link>
+            <Link to="/blogs" className="block">Blogs</Link>
           </button>
           <button className='w-full hover:bg-violet-100' onClick={() => setIsOpen(!isOpen)}>
-            <a href="#contact" className="block py-1">Contact</a>
+            <a href="#contact" className="block">Contact</a>
           </button>
           
           
