@@ -42,7 +42,7 @@ const Preview = () => {
   };
   return (
     <div className="relative max-w-full overflow-hidden p-8 z-50">
-      <h1 className="text-white text-center text-lg font-bold mb-4">
+      <h1 className="text-black text-center text-lg font-bold mb-4">
         What We Offer
       </h1>
       <div
@@ -52,7 +52,7 @@ const Preview = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-full flex-shrink-0 p-6 border-white rounded-lg border-4 mx-2 shadow-lg shadow-slate-400"
+            className="w-full flex-shrink-0 p-6 border-red-950 rounded-lg border-2 mx-1 shadow-lg shadow-slate-400"
             style={{
               backgroundImage: `url(${slide.image})`,
               backgroundSize: "cover",
@@ -76,12 +76,12 @@ const Preview = () => {
           <div
             key={index}
             className={`h-2 w-2 rounded-full ${
-              index === currentIndex ? "bg-white" : "bg-gray-400"
+              index === currentIndex ? "bg-red-950" : "bg-gray-400"
             }`}
           />
         ))}
       </div>
-      <p className="text-center items-center mt-10 text-white">tap the slide to see more</p>
+      <p className="text-center items-center mt-10 text-black">tap the slide to see more</p>
     </div>
     
   );

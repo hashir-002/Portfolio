@@ -29,15 +29,15 @@ const Blogs = ({ direction = 'grid' }) => {
         return (
           <motion.div
             key={index}
-            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg m-3 transition-shadow"
-            whileHover={{ scale: 1.05 }}
+            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg m-3 transition-shadow "
+            // whileHover={{ scale: 1.1 }}
           >
             {/* Image Wrapper */}
             <div className="relative w-auto h-32 lg:h-40 overflow-hidden rounded-t-lg">
               <img
                 src={item.fields.cover.fields.file.url}
                 alt={item.fields.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover mx-auto transition duration-700 hover:skew-x-2 hover:scale-110"
               />
             </div>
             {/* Content */}
@@ -46,7 +46,7 @@ const Blogs = ({ direction = 'grid' }) => {
               <p className="text-gray-500 mb-4">{item.fields.date}</p>
               <p className="text-gray-600 mb-4">{item.fields.excerpt}</p>
               <a href={`/blog/${item.fields.slug}`}>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                <button className="bg-purple-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-700">
                   Read
                 </button>
               </a>

@@ -10,9 +10,9 @@ const ProjectCard = ({ title, description, imageUrl, reverse, gitlink }) => {
   return (
     <div
       ref={ref}
-      className={`flex overflow-hidden max-w-screen flex-col lg:flex-row ${
+      className={`flex overflow-hidden flex-col lg:flex-row ${
         reverse ? "lg:flex-row-reverse" : ""
-      } items-center justify-between my-12 p-6 bg-red-950 text-white rounded-lg transition-all duration-700 ease-out transform ${
+      } items-center justify-between my-12 p-6 bg-purple-600 text-white rounded-lg transition-all duration-700 ease-out transform ${
         inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
       }`}
     >

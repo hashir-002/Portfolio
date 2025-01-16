@@ -56,7 +56,7 @@ const Skills = () => {
     <div className="min-h-screen p-8">
       {/* Section Heading */}
       <h2
-        className="text-4xl font-bold text-center mb-10 text-white"
+        className="text-4xl font-bold text-center mb-10"
         id="skills"
       >
         My Skills

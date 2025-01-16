@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { client } from '../contentful/client';
 import RichText from '../contentful/RichText';
 import Blogs from './Blogs';
+import Contact from '../components/Contact';
 
 const BlogPost = () => {
   const params = useParams();
@@ -33,6 +34,8 @@ const BlogPost = () => {
   if (Loading) return <p className="pt-3 lg:pt-16 text-2xl font-bold text-violet-950">Loading</p>;
 
   return (
+    <>
+    
     <div className="container mx-auto p-4 pt-4 lg:pt-24">
       <div className="flex flex-col lg:flex-row lg:space-x-8">
         {/* Main Content */}
@@ -60,6 +63,9 @@ const BlogPost = () => {
         </div>
       </div>
     </div>
+
+    <Contact/>
+    </>
   );
 };
 

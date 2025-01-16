@@ -52,7 +52,7 @@ const Form = () => {
         <div className="flex justify-center lg:w-2/3 w-96 p-4">
             <form
                 onSubmit={onSubmit}
-                className="w-full max-w-lg p-6 bg-gradient-to-r from-cyan-800 via-green-800 to-blue-950 shadow-lg rounded-2xl border-2 border-violet-100 space-y-6"
+                className="w-full max-w-lg p-6 bg-gradient-to-tr from-[#f88973] to-[#0d0d1b] shadow-lg rounded-2xl border-2 border-violet-100 space-y-6"
             >
                 <h2 className="text-2xl font-bold text-center text-white">Let’s <span className='text-red-200'>Work</span> Together</h2>
 
